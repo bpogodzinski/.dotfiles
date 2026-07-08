@@ -28,7 +28,6 @@
 
 [help]
         autocorrect = true
-        delay = 20
 [commit]
         verbose = true
 [rerere]
