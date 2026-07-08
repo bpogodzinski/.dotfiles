@@ -8,9 +8,11 @@ return {
       "ruff",
       "bashls",
       "yamlls",
+      "jsonls",
     }
   },
   dependencies = {
+    { 'b0o/schemastore.nvim' },
     {
       "mason-org/mason.nvim",
       opts = {
@@ -69,10 +71,16 @@ return {
           yamlls = {
             settings = {
               yaml = {
-                schemaStore = {
-                  enable = true,
-                  url = 'https://www.schemastore.org/api/json/catalog.json',
-                },
+                schemaStore = { enable = false, url = '' },
+                schemas = require('schemastore').yaml.schemas(),
+              },
+            },
+          },
+          jsonls = {
+            settings = {
+              json = {
+                schemas = require('schemastore').json.schemas(),
+                validate = { enable = true },
               },
             },
           },
