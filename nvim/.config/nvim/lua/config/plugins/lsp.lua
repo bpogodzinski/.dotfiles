@@ -7,6 +7,7 @@ return {
       "basedpyright",
       "ruff",
       "bashls",
+      "yamlls",
     }
   },
   dependencies = {
@@ -62,6 +63,16 @@ return {
             settings = {
               basedpyright = {
                 disableOrganizeImports = true,
+              },
+            },
+          },
+          yamlls = {
+            settings = {
+              yaml = {
+                schemaStore = {
+                  enable = true,
+                  url = 'https://www.schemastore.org/api/json/catalog.json',
+                },
               },
             },
           },
