@@ -14,6 +14,12 @@ return {
       })
 
       require('mini.surround').setup()
+
+      require('mini.jump').setup({
+        mappings = { repeat_jump = ';' },
+      })
+      vim.keymap.set({ 'n', 'x', 'o' }, ',', function() MiniJump.jump(nil, not MiniJump.state.backward) end)
+
     end
   }
 }
