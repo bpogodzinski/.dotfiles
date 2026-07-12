@@ -1,15 +1,10 @@
 return {
   'saghen/blink.cmp',
+  version = '1.*',
   dependencies = {
-    'saghen/blink.lib',
     -- optional: provides snippets for the snippet source
     'rafamadriz/friendly-snippets',
   },
-  build = function()
-    -- build the fuzzy matcher, optionally add a timeout to `pwait(timeout_ms)`
-    -- you can use `gb` in `:Lazy` to rebuild the plugin as needed
-    require('blink.cmp').build():pwait()
-  end,
 
   opts = {
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
@@ -25,7 +20,6 @@ return {
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
     keymap = { preset = 'super-tab' },
-
     -- (Default) Only show the documentation popup when manually triggered
     completion = { documentation = { auto_show = false } },
 
