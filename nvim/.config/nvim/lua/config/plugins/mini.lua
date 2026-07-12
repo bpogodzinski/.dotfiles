@@ -17,6 +17,9 @@ return {
       vim.keymap.set({ 'n', 'x', 'o' }, ',', function() MiniJump.jump(nil, not MiniJump.state.backward) end)
 
       require('mini.comment').setup()
+
+      require('mini.icons').setup()
+
     end
   }
 }
