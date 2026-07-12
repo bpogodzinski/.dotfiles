@@ -6,10 +6,6 @@ return {
       statusline.setup { use_icons = true }
 
       require('mini.ai').setup({
-        mappings = {
-          around_next = 'aa',
-          inside_next = 'ii',
-        },
         n_lines = 500,
       })
 
