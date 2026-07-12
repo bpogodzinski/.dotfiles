@@ -18,7 +18,7 @@ return {
 
       require('mini.comment').setup()
 
-      require('mini.icons').setup()
+      require('mini.tabline').setup()
 
     end
   }
