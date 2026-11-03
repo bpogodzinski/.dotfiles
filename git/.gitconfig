@@ -49,3 +49,7 @@
 [pull]
         rebase = true
 
+# Machine-specific settings, e.g. [user]. Keep last so it can override the above.
+[include]
+        path = ~/.gitconfig.local
+

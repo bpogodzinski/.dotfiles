@@ -17,4 +17,7 @@ export EDITOR='nvim'
 export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
-export PATH=/home/rocky/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# Machine-specific settings
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
